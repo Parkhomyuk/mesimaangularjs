@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tasksList">
+<head>
+    <meta charset="UTF-8">
+    <title>MESIMA</title>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css"/>
+    <link rel="stylesheet" type="text/css" href="app/css/style.css"/>
+</head>
+<body >
+<!--<nav class="navbar navbar-inverse bg-inverse">
+    <a class="navbar-brand">Mesima</a>
+
+</nav>-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"> משימה</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Создать задание <span class="sr-only">(current)</span></a>
+                </li>
+                <li>
+                    <a href="#">Все задания</a>
+                </li>
+                <li>
+                    <a href="#">Исполнители</a>
+                </li>
+
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+
+                       aria-expanded="false">Куда я попал<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Подпункт 1.1</a></li>
+                        <li><a href="#">Подпункт 1.2</a></li>
+                        <li><a href="#">Подпункт 1.3</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Подпункт 1.4</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Подпункт 1.5</a></li>
+                    </ul>
+                </li>
+                <li>
+             <a class="b-toolbar__authorization__link js-btnRegistration" href="">Регистрация </a>
+
+                </li>
+                <li>
+                    <a class="b-toolbar__authorization__link js-btnLogin" href="">Вход</a>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+</nav>
+
+<ng-view></ng-view>
+<footer id="Footer" class="b-footer">
+
+  <div class="b-footer__inner">
+        <!--<div class="b-footer__menu-wrapper">
+            <div class="b-footer-contacts">
+                <div class="b-footer-contacts__wrapper">
+                    <p class="b-footer-contacts__hotline">
+                        <a class="b-footer-contacts__phone js-call-mobile">+7 (495) 969 09 63</a> <nobr>г. Москва</nobr><br>
+                        <a class="b-footer-contacts__phone js-call-mobile">+7 (812) 986 95 29</a> <nobr>г. Санкт-Петербург</nobr><br>
+                        <a class="b-footer-contacts__phone js-call-mobile">8 (800) 700 21 57</a> <nobr>другие города</nobr><br>
+                    </p>
+                    <p class="b-footer-contacts__time">
+                        пн.-пт <nobr>9:00 — 23:00</nobr><br>
+                        сб.-вс <nobr>9:00 — 21:00</nobr><br>
+                        <nobr>по московскому времени</nobr>
+                    </p>
+                    <p class="b-footer-contacts__mail">
+                        Эл. почта: <a href="mailto:privet@youdo.com">privet@youdo.com</a>
+                    </p>
+                    <div class="b-bnr-psb"><a href="/psb?utm_source=directs&amp;utm_medium=banner&amp;utm_term=footer_business&amp;utm_content=btn1&amp;utm_campaign=new"><img src="https://static.youdo.com/i/banners/PSB-footer.jpg"></a></div>
+                </div>
+            </div>
+
+
+            <div class="b-footer-menu">
+                <ul class="b-footer-menu__subsection">
+                    <li class="b-footer-menu__item i-title">Как тут все устроено</li>
+                    <li class="b-footer-menu__item"><a class="i-howtobecome js-track-ga-event-verification" href="/verification">Как стать исполнителем</a></li>
+                    <li class="b-footer-menu__item"><a href="/package">Безлимитные пакеты</a></li>
+
+                    <li class="b-footer-menu__item"><a href="/geotaskshint">Как это работает</a></li>
+                    <li class="b-footer-menu__item"><a href="/sbr">Сделка без риска</a></li>
+                    <li class="b-footer-menu__item"><a href="https://youdo.com/b2b" target="_blank">Исполнители для бизнеса</a></li>
+                    <li class="b-footer-menu__item"><a href="/security">Безопасность и гарантии</a></li>
+                    <li class="b-footer-menu__item"><a href="/badges">Награды и рейтинг</a></li>
+                    <li class="b-footer-menu__item"><a href="/reviews">Отзывы исполнителей</a></li>
+                    <li class="b-footer-menu__item"><a href="/reviews/authors">Отзывы заказчиков</a></li>
+                </ul>
+                <ul class="b-footer-menu__subsection">
+                    <li class="b-footer-menu__item i-title">Компания</li>
+                    <li class="b-footer-menu__item"><a href="http://blog.youdo.com">Наш блог</a></li>
+                    <li class="b-footer-menu__item"><a href="/job">Вакансии</a></li>
+                    <li class="b-footer-menu__item"><a href="/contacts">Контакты</a></li>
+                    <li class="b-footer-menu__item"><a href="/press">СМИ о нас</a></li>
+                    <li class="b-footer-menu__item"><a href="https://goo.gl/ftJAJC" target="_blank">Реклама на&nbsp;сервисе</a></li>
+                </ul>
+                <ul class="b-footer-menu__subsection">
+                    <li class="b-footer-menu__item i-title">Поддержка</li>
+                    <li class="b-footer-menu__item"><a href="/terms">Правила сервиса</a></li>
+                    <li class="b-footer-menu__item"><a href="/faq">Частые вопросы</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>-->
+
+<!--
+        <div class="b-footer__sharing">
+            <div class="b-social b-footer__social">
+                <span class="b-social__text">Присоединяйтесь к нам:</span>
+                <div class="b-social__btn"><a href="https://www.facebook.com/mesima" target="_blank" class=" "><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                <div class="b-social__btn"><a href="https://twitter.com/mesima" target="_blank" ><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                <div class="b-social__btn"><a href="https://www.instagram.com/mesima" target="_blank" class=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+                <div class="b-social__btn_ytb"> <a href="https://www.youtube.com/user/mesima" target="_blank" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></div>
+            </div>
+        </div>-->
+
+
+        <div class="b-footer__copyright">
+            <div class="b-footer__copyright-wrapper">
+                © 2018 Mesima (mesima.com)
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+ <script src="node_modules/jquery/dist/jquery.min.js"></script>
+ <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/angular-animate/angular-animate.min.js"></script>
+<script src="app/js/app.js"></script>
+<script src="app/js/tasksList/tasksList.controller.js"></script>
+<script src="app/js/tasksList/task.controller.js"></script>
+<script src="app/js/services/tasksService.js"></script>
+<script src="app/js/filters/customFilters.filter.js"></script>
+
+
+</body>
+</html>

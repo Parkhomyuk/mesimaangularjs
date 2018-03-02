@@ -1,0 +1,354 @@
+/*navbar*/
+/* цвет фона и рамки навигационного меню */
+.navbar-brand{
+    font-size: 3rem;
+    text-shadow: 1px 1px 2px black, 0 0 1em #5e51cc;
+}
+.b-toolbar__authorization{
+    background-color: red;
+}
+.navbar-default {
+    background-color: rgba(0, 0, 0, 0.39);
+    border-color: rgba(255, 254, 254, 0);
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+    color: #fffefe;
+}
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #ecf0f1;
+}
+
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a >div>a, .navbar-default .navbar-nav > li > a >div>span>a{
+    color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a >div>a, .navbar-default .navbar-nav > li > a >div>span>a:hover,
+.navbar-default .navbar-nav > li > a >div>a, .navbar-default .navbar-nav > li > a >div>span>a:focus
+{
+    color: #d1ffed;
+}
+
+
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #d1ffed;
+}
+/* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #d1ffed;
+    background-color: rgba(144, 187, 169, 0);
+}
+/* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #000000;
+    background-color: #d4d4d4;
+}
+/* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #07205b;
+    border-bottom-color: rgba(212, 212, 212, 0.67);
+}
+/* Цвет стрелочки (треугольничка) при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #8fb8a6;
+    border-bottom-color: #d1ffed;
+}
+/* Цвет стрелочки (треугольничка), открывшегося пункта меню */
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #6c7c72;
+    border-bottom-color: #d1ffed;
+}
+/* CSS стили для мобильных устройств */
+/* Цвет рамки у кнопки, которая открывает меню */
+.navbar-default .navbar-toggle {
+    border-color: #d1ffed;
+}
+/* Цвет фона кнопки (которая открывает меню) при поднесении к ней курсора мышки или при нахождении её в фокусе */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #d1ffed;
+}
+/* Цвет полосочек в кнопочке, которая открывает меню */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+/* Цвет пунктов меню в раскрывающихся списках */
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    /* Цвет и фон пункта меню в раскрывающихся списках, при поднесении к нему курсора мышки или при нахождении его в фокусе */
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #d1ffed;
+        background-color: #d1ffed;
+    }
+}
+/*navbar*/
+.map, .level1{
+    margin-top: 7vh;
+}
+.sub.ng-enter {
+   /* transition:all ease-in 0.25s;
+    height: 0px;*/
+    opacity: 0;
+    transition:all ease-in 0.75s;
+
+
+}
+
+.sub.ng-enter.ng-enter-active  {
+    opacity: 1;
+}
+.b-tasks-filter_btn{
+text-align: right;
+}
+.b-tasks-filter_btn{
+    margin-top: 2vh;
+}
+.search{
+    margin: 10vh 2vw 2vh 2vw;
+
+}
+.listLocation{
+    list-style-type: none;
+    position: absolute;
+    padding: 0;
+}
+.listChoose {
+
+
+}
+.fa-chevron-up, .fa-chevron-down{
+    margin-left: 0.5vw;
+}
+.radio,.search-header{
+    margin-top: 2vh;
+}
+.b-tasks-filter_btn{
+text-align: center;
+
+}
+.listChoose{
+    width: 13vw;
+    /*padding-left: 1vw*/;
+    text-align: left;
+}
+.img{
+    width: 7vw;
+    height: auto;
+    -moz-border-radius: 3.5vw;
+    -webkit-border-radius: 3.5vw;
+    text-align:center;
+}
+.cardText{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.cardTextDes{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+.customer{
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+.TimeCat{
+    margin-top: 1vh;
+}
+.time{
+    margin-bottom: 1vh;
+}
+.customer h5{
+    color: #347bb7;
+    font-weight: bold;
+}
+.customer div > .fa-thumbs-up{
+    color: rgba(144, 74, 255, 0.74);
+}
+.customer div > .fa-thumbs-down{
+    color: red;
+}
+.level1{
+    z-index: 1;
+}
+.level2{
+    z-index: 0;
+}
+.listHeader h3 strong{
+    color: #347bb7;
+}
+.listHeader{
+    cursor: pointer;
+}
+.address{
+    color: rgba(0, 193, 0, 0.84);
+}
+.imgMap{
+    margin-top: 1vh;
+    width: 12vw;
+    height: auto;
+}
+.mapaItem>.imgMap{
+    width: 55vw;
+    height: auto;
+}
+.map{
+    text-align: center;
+}
+
+/*Mesima describe*/
+.mesimaDescribe{
+    margin-top: 7vh;
+}
+.descrb{
+    margin-bottom: 7vh;
+}
+.badge-secondary{
+    font-size: 2rem;
+}
+.item_status{
+    color: green;
+}
+.itemDescribe{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 2vh;
+}
+.itemD{
+    padding: 0 2vw 0 2vw;
+    font-size: 1.2rem;
+
+}
+.itemD label{
+    margin-right: 2vw;
+}
+.itemDHeader{
+    padding: 1vh 0 1vh 0;
+}
+.itemProp1{
+    font-weight: bold;
+}
+.itemProp2{
+
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+}
+/*Mesima describe*/
+/* footer*/
+.b-footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(112, 156, 255, 0.98);
+    color: #000000;
+    text-align: center;
+}
+.b-footer__copyright{
+    background-color: rgba(0, 0, 0, 0.39);
+    border-color: rgba(255, 254, 254, 0);
+}
+.b-footer__social{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding-top: 1vh;
+}
+.b-social__btn, .b-social__btn_ytb{
+    border: 1px solid rgba(24, 76, 224, 0.78);
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    width: 35px;
+    line-height: 35px;
+    margin: 2vh 0.3vw;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+}
+.b-social__btn:hover{
+    background-color: #07205b;
+    border: 1px solid rgba(24, 76, 224, 0.78);
+}
+.b-social__btn_ytb:hover{
+    background-color: #d31c06;
+    border: 1px solid rgba(24, 76, 224, 0.78);
+}
+.b-footer__sharing{
+    padding: 0 1vw 2vh 1vw;
+}
+.b-social__text{
+    padding: 3vh 0.5vw;
+}
+/* footer*/
+/* mainCont*/
+.sub{
+    overflow-x: hidden;
+    overflow:  hidden;
+}
+.pagination{
+    margin-bottom: 7vh;
+}
+/* mainCont*/
+/*media*/
+@media only screen and (max-width: 750px) {
+
+    .itemD {
+        font-size: 0.5em;
+    }
+    .descrb .row>div> h1{
+        font-size: 1em;
+    }
+    .itemProp1{
+        font-size: 0.7em;
+    }
+    .itemProp2{
+        font-size: 0.5em;
+    }
+}
+@media only screen and (max-width: 992px) {
+
+    .itemD {
+        font-size: 0.8em;
+    }
+    .descrb .row>div> h1{
+        font-size: 1.5em;
+    }
+    .itemProp1{
+
+    }
+    .itemProp2{
+
+    }
+}
+/*media*/

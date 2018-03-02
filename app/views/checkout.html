@@ -1,0 +1,79 @@
+<div ng-controller="taskCtr" class="mesimaDescribe">
+    <div class="col-xs-8 descrb">
+        <div class="row">
+             <div class="col-xs-9"><h1>{{currentItem.name}}</h1></div>
+       <div class="col-xs-3"><h1><span class="badge badge-secondary">{{currentItem.price |currency:' ILS '}}</span></h1></div>
+        </div>
+
+        <div class="itemDescribe">
+            <div class="item_status itemD">{{currentItem.status}}</div>
+            <div class="item_views itemD"><label>|</label> {{currentItem.views}} просмотров</div>
+            <div class="itemD"><label>|</label> {{currentItem.dateStart | date:'dd MM yyyy'}}</div>
+            <div class="itemD"><label>|</label> {{currentItem.subCategory}}</div>
+        </div>
+        <div class="row" ng-if="currentItem.address!=' '">
+            <div class="col-xs-12 mapaItem">
+                <img src="app/img/mapTA.png" alt="" class="imgMap">
+            </div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.address!=' '">
+            <div class="col-xs-3 itemProp1"  >   Адрес   </div>
+            <div class="col-xs-9 itemProp2" > {{currentItem.address}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.addressCurFrom!=undefined">
+            <div class="col-xs-3 itemProp1"  >   Адрес   </div>
+            <div class="col-xs-9 itemProp2" > {{currentItem.addressCurFrom}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.dateStart!=undefined">
+            <div class="col-xs-3 itemProp1" >  Начать   </div>
+            <div class="col-xs-9 itemProp2" > {{currentItem.dateStart}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.dateEnd!=undefined || currentItem.dateEnd!=''">
+            <div class="col-xs-3 itemProp1" >  Завершить   </div>
+            <div class="col-xs-9"  > {{currentItem.dateEnd}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.price!=undefined">
+            <div class="col-xs-3 itemProp1" >  Бюджет   </div>
+            <div class="col-xs-9 itemProp2"  > {{currentItem.price | currency:" ILS "}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.payment!=undefined">
+            <div class="col-xs-3 itemProp1" >  Оплата   </div>
+            <div class="col-xs-9 itemProp2"  > {{currentItem.payment}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.duration!=undefined">
+            <div class="col-xs-3 itemProp1" >  Длительность   </div>
+            <div class="col-xs-9 itemProp2"  > {{currentItem.duration}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.place!=undefined">
+            <div class="col-xs-3 itemProp1" >  Место   </div>
+            <div class="col-xs-9 itemProp2"  > {{currentItem.place}}</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.age!=undefined">
+            <div class="col-xs-3 itemProp1" >  Возраст   </div>
+            <div class="col-xs-9 itemProp2"  > {{currentItem.age}} лет</h6></div>
+        </div>
+        <div class="row itemDHeader" ng-if="currentItem.description!=undefined">
+            <div class="col-xs-3 itemProp1" >  Нужно   </div>
+            <div class="col-xs-9 itemProp2"  > {{currentItem.description}}</h6></div>
+        </div>
+
+    </div>
+    <div class="col-xs-4">
+        <h5>Задание :{{currentItem.jobNumber}}</h5>
+        <h5>Заказчик этого задания</h5>
+        <div class="cardTextDes">
+            <div class='m-r-1 photo'>
+                <img class="img" src="{{currentItem.photo}}" alt="Photo"/>
+            </div>
+            <div class="customer" >
+                <div ><h5>{{item.customer}}</h5></div>
+                <div>Отзывы: <i class="fa fa-thumbs-up"></i> {{currentItem.reviewsGood}} <i class="fa fa-thumbs-down"></i> {{currentItem.reviewsBad}}</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <ng-include src="'app/views/social.html'"></ng-include>
+    </div>
+
+</div>

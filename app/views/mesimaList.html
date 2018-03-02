@@ -1,0 +1,140 @@
+<div ng-controller="tasksListCtr" class="mainCont">
+    <div class="panel panel-default">
+    <div class="col-xs-3 map"  >
+       <img class="imgMap" src="./app/img/mapTA.png" alt="Photo"/>
+    </div>
+    <div class="col-xs-8 well level1">
+        <div class="b-tasks-filter_first panel panel-default ">
+                <div class="search search-header">
+                    <div class="col-xs-8">
+                        <h3 class="b-tasks-filter__title js-category-title">Все категории</h3>
+                    </div>
+                    <div class="col-xs-4 b-tasks-filter_btn">
+
+                        <button class="btn btn-default btn" type="button" data-city-id="4400" data-default-city-id="4400" >Tel Aviv</button>
+                    </div>
+                </div>
+            <div class="search">
+                <div class="col-xs-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Поиск по заданиям…" ng-model="searchWord">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="searchByKeyWord()"><i class="fa fa-search"></i></button>
+                            <button class="btn btn-default" type="button" ng-click="canselSearchByKeyWord()"><i class="fa fa-ban" aria-hidden="true" style="color: red"></i></button>
+                         </span>
+                    </div>
+
+                </div>
+                <div class="input-group col-xs-4">
+                    <button type="button" class="btn btn-default listChoose"  ng-click="openList()"> <i class="fa fa-star" ng-style="choosedType.style"></i> {{choosedType.name}}<i class="fa fa-chevron-up" ng-if="showMe"></i><i class="fa fa-chevron-down" ng-if="!showMe"></i></span></button>
+                    <ul style=" " ng-show="showMe" class="listLocation">
+                        <li><button type="button" class="btn btn-default listChoose" ng-click="choosType(type)" ng-repeat="type in cType" ><i class="fa fa-star" ng-style="type.style"></i>  {{type.name}} </button></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!--<div class="search radio">
+                <div class="container" task-filter-hottasks>
+                    Задания:
+                    <label class="radio-inline">
+                        <input type="radio" name="survey" id="Radios1" value="Yes">
+                        Без предложений
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="survey" id="Radios2" value="No">
+                        Горячие
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="survey" id="Radios3" value="Notsure">
+                        Сделка без риска
+                    </label>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="panel panel-default row"  ng-hide="data.error">-->
+
+
+    <div class="col-xs-3 level2">
+        <a ng-click="showSubMenu()"
+           class="btn btn-block btn-default btn-lg" ng-show="currentCategory!=null">Home</a>
+        <a class=" btn btn-block btn-default btn-lg" ng-repeat="item in data.mesimot | unique:'category'" ng-click="showSubMenu(item)" ng-hide="currentCategory!=null">
+            {{item}}
+        </a>
+        <a ng-animate="'animate'" ng-repeat="item in currentSubCategory | orderBy:'category' "
+           ng-click="selectSubCategory(item)" class=" btn btn-block btn-default btn-lg sub"
+           ng-class="getCategoryClass(item)" ng-if="currentCategory!=null" ng-show="currentSubCategory!=null"   >
+            {{item}}
+        </a>
+    </div>
+    <div class="col-xs-8">
+        <div class="well listHeader" ng-repeat="item in data.mesimot | filter:subCategoryFilterFn | range:currentPage:countItemsOnPage" ng-click="showItem(item)">
+            <!--<span class="lead">{{item.name}}</span>-->
+           <!-- <a href="#/checkout">-->
+                <div class="row" style="cursor: pointer" >
+                    <div class="col-xs-8"> <h3> <strong>{{item.name}}</strong></h3>  </div>
+                    <div class="col-xs-4">
+                        <h3>
+                <span class="pull-right label label-primary">
+                    {{item.price | currency: "ILS " }}
+                </span>
+                        </h3>
+                    </div>
+                </div>
+
+                <!--<h3>
+                    <strong>{{item.name}}</strong>
+                    <span class="pull-right label label-primary">
+                        {{item.price | currency: "ILS " }}
+                    </span>
+                </h3>-->
+                <!--<button ng-click="addProductToCart(item)"
+                        class="btn btn-success pull-right" ><a href="#/checkout">add to cart</a></button>-->
+                <div class="card-text cardText">
+                    <div class="cardTextDes">
+                        <div class='m-r-1 photo'>
+                            <img class="img" src="{{item.photo}}" alt="Photo"/>
+                        </div>
+                        <div class="customer" >
+                            <div ><h5>{{item.customer}}</h5></div>
+                            <div>Отзывы: <i class="fa fa-thumbs-up"></i> {{item.reviewsGood}} <i class="fa fa-thumbs-down"></i> {{item.reviewsBad}}</div>
+                        </div>
+
+                    </div>
+                    <div class="TimeCat">
+                        <div class="time"> <i class="fa fa-clock-o" aria-hidden="true"></i> 07:24:26</div>
+                        <div class="category">{{task.category}}</div>
+                        <div class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> {{item.address}}</div>
+                    </div>
+                </div>
+           <!-- </a>-->
+
+
+        </div>
+
+        <div class="pull-right btn-group pagination">
+            <a ng-repeat="page in data.mesimot | filter:subCategoryFilterFn |  pagesCount:countItemsOnPage"
+               ng-click="selectPage($index + 1)" class="btn btn-default"
+               ng-class="getPageClass($index + 1)">
+                {{$index + 1}}
+            </a>
+        </div>
+        <!--<div class="b-footer__sharing">
+            <div class="b-social b-footer__social">
+                <span class="b-social__text">Присоединяйтесь к нам:</span>
+                <div class="b-social__btn"><a href="https://www.facebook.com/mesima" target="_blank" class=" "><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                <div class="b-social__btn"><a href="https://twitter.com/mesima" target="_blank" ><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                <div class="b-social__btn"><a href="https://www.instagram.com/mesima" target="_blank" class=""><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+                <div class="b-social__btn_ytb"> <a href="https://www.youtube.com/user/mesima" target="_blank" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></div>
+            </div>
+        </div>-->
+        <div class="col-xs-12">
+            <ng-include src="'app/views/social.html'"></ng-include>
+        </div>
+       </div>
+    </div>
+</div>
