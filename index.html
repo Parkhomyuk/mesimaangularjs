@@ -33,7 +33,7 @@
                     <a href="#">Создать задание <span class="sr-only">(current)</span></a>
                 </li>
                 <li>
-                    <a href="#">Все задания</a>
+                    <a href="#/mesimot">Все задания</a>
                 </li>
                 <li>
                     <a href="#">Исполнители</a>
@@ -64,6 +64,17 @@
                 <li>
                     <a class="b-toolbar__authorization__link js-btnLogin" href="">Вход</a>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+
+                       aria-expanded="false">Язык<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">עברית</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Русский</a></li>
+
+                    </ul>
+                </li>
 
             </ul>
 
@@ -73,6 +84,9 @@
 </nav>
 
 <ng-view></ng-view>
+<div class="col-xs-12">
+    <ng-include src="'app/views/social.html'"></ng-include>
+</div>
 <footer id="Footer" class="b-footer">
 
   <div class="b-footer__inner">

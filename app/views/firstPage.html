@@ -1,0 +1,195 @@
+<div class="b-hero-video js-hero" style="background-image: url(app/img/frame.jpg)">
+    <!-- same image as video -> poster -->
+
+    <div class="b-hero-video__offer js-hero-form-wrapper">
+        <div class="b-hero-video__h1">Освободим <span class="nobr">вас от забот</span>
+        </div>
+        <div class="b-hero-video__h2">Поможем найти надежного исполнителя <span class="nobr">для любых задач</span>
+        </div>
+        <div class="b-hero-video__formbox">
+            <form action="/tasks/suggest" class="js-hero-form" autocomplete="off" method="POST" novalidate="novalidate">
+                <input type="hidden" class="js-hero-suggest-id" name="suggestionId" value="">
+                <div class="b-hero-video__form js-hero-input-block">
+                    <div class="b-hero-video__input">
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                        <input type="text" class="js-hero-input ui-autocomplete-input" name="text" maxlength="220" placeholder="Напишите, чем вам помочь…" autocomplete="off">
+                    </div>
+                    <!-- <div class="b-hero-video__submit"><input type="submit" class="js-hero-submit" value="Заказать услугу">-->
+                    <div class="b-hero-video__submit"><button class="btn btn-warning">Заказать услугу</button> <!---->
+                    </div>
+                </div>
+                <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></form>
+        </div>
+        <!-- /.hero-video__formbox -->
+        <!-- /.hero-video__form -->
+        <div class="b-hero-video__example">Например: <span class="js-hero-example" data-id="18">собрать шкаф</span>
+        </div>
+        <a href="/verification" class="b-hero-video__gowork js-stay-executor"><span>стать исполнителем и начать зарабатывать</span></a>
+    </div>
+
+
+    <!-- /.hero-video__offer -->
+    <div class="b-hero-video__keeper">
+        <video poster="app/img/frame.jpg" loop="" autoplay="">
+            <source src="app/video/hero_video.mp4" type="video/mp4">
+            <!--  <source src="https://cdn3.armut.com/images/hero.webm" type="video/webm"> -->
+        </video>
+    </div>
+    <!-- /.hero-video__keeper -->
+
+</div>
+<div class="container">
+    <div class="row nav-serv">
+        <div class="col-xs-4">
+            <a href="#">
+                <div><img src="app/img/nav_serv1.png" class="nav-serv__image"></div>
+                <div> <h3>Удобная и безопасная оплата</h3></div>
+                <div>При оплате через Сделку без риска YouDo вернет деньги, если что-то пойдет не так.</div>
+
+            </a>
+
+        </div>
+        <div class="col-xs-4">
+            <a href="#">
+                <div>
+                    <div><img src="app/img/nav_serv2.png" class="nav-serv__image"></div>
+                    <div> <h3>Надежные исполнители</h3></div>
+                    <div>Исполнители со статусом «Паспорт подтвержден» прошли проверку документов.</div>
+                </div>
+
+            </a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">
+                <div><img src="app/img/nav_serv3.png" class="nav-serv__image"></div>
+                <div><h3> Достоверные отзывы</h3></div>
+                <div>Более 1 000 000 отзывов от заказчиков помогут выбрать подходящего исполнителя.</div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container services">
+    <div class="row">
+        <div class="col-xs-3">
+            <i class="fa fa-grav" aria-hidden="true"></i>
+            Курьерские услуги
+        </div>
+        <div class="col-xs-3">
+            <i class="fa fa-cog" aria-hidden="true"></i> Ремонт и строительство</div>
+        <div class="col-xs-3"> <i class="fa fa-truck" aria-hidden="true"></i>Грузоперевозки</div>
+        <div class="col-xs-3"><i class="fa fa-shower" aria-hidden="true"></i>Уборка</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3"><i class="fa fa-desktop" aria-hidden="true"></i>Компьютерная помощь</div>
+        <div class="col-xs-3">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            Фото- и виде- усдуги</div>
+        <div class="col-xs-3"><i class="fa fa-globe" aria-hidden="true"></i>Web- разработка</div>
+        <div class="col-xs-3"><i class="fa fa-plug" aria-hidden="true"></i>Установка и ремонт техники</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3"> <i class="fa fa-rocket" aria-hidden="true"></i>Мероприятия и промо-акции</div>
+        <div class="col-xs-3"><i class="fa fa-paint-brush" aria-hidden="true"></i>Дизайн</div>
+        <div class="col-xs-3"><i class="fa fa-male" aria-hidden="true"></i>Виртуальный помощник</div>
+        <div class="col-xs-3"><i class="fa fa-television" aria-hidden="true"></i>Ремонт цифровой техники</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3"><i class="fa fa-smile-o" aria-hidden="true"></i>Красота и здоровье</div>
+        <div class="col-xs-3"><i class="fa fa-book" aria-hidden="true"></i>Юридическая помощь</div>
+        <div class="col-xs-3"> <i class="fa fa-car" aria-hidden="true"></i> Ремонт транспорта</div>
+        <div class="col-xs-3"><i class="fa fa-sign-language" aria-hidden="true"></i>Репетиторы и образование</div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button class="btn btn-block btn-outline-primary">All categories</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>
+<div class="container instruction">
+    <div class="instruction_title">
+        <h1>С YouDo вы экономите на услугах до 70%.</h1>
+        <h1>Как это возможно?</h1>
+    </div>
+    <div class="row tasck">
+
+        <div class="col-md-6 "><img src="app/img/hiw-1.png"></div>
+        <div class="col-md-6  tasck_text">
+            <h2>1. Создайте задание</h2>
+            <div>Опишите своими словами задачу, <br>которую требуется выполнить.</div>
+            <a>Создать задание</a>
+        </div>
+
+    </div>
+    <div class="row tasck">
+
+
+        <div class="col-md-6 tasck_text">
+            <h2>2.  Исполнители предложат вам свои услуги и цены</h2>
+            <div>Уже через пару минут вы начнете получать <br>предложения от исполнителей, готовых <br> выполнить ваше задание.</div>
+            <a>Создать задание</a>
+        </div>
+        <div class="col-md-6 "><img src="app/img/hiw-2.png"></div>
+    </div>
+    <div class="row tasck">
+
+        <div class="col-md-6 "><img src="app/img/hiw-3.png"></div>
+        <div class="col-md-6  tasck_text">
+            <h2>3. Выберите лучшее предложение</h2>
+            <div >Вы сможете выбрать подходящего  <br>  исполнителя, по разным критериям:</div>
+            <div class="row">
+                <div class="col-md-6">Стоимость услуг </div>
+                <div class="col-md-6">Отзывы заказчиков</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">Рейтинг</div>
+                <div class="col-md-6">Примеры работ</div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class=" benefit" style="padding: 2vh 0 2vh 0">
+    <div class="benifit_header"><h1>Основные преимущества YouDo</h1></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div><h3>Выгодные цены</h3></div>
+                <div><p>У частных исполнителей нет расходов на офис, рекламу, зарплату секретарю и других затрат, которые сервисные компании обычно включают в стоимость своих услуг.</p></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div><h3>Проверенные исполнители</h3></div>
+                <div><p>Все исполнители YouDo проходят процедуру верификации, мы проверяем отзывы, разбираемся с жалобами и контролируем качество их работы.</p></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <div><h3>Экономия времени</h3></div>
+                <div><p>На YouDo вы можете найти подходящего исполнителя за несколько минут. Многие из них готовы приступить к работе в тот же день, а иногда в тот же час.</p></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="app_mobile" style="margin-bottom: 50vh">
+    <div class="row container">
+        <div class="col-md-10">
+            <h1>A personal assistant in your pocket</h1>
+            <div><h4>Download our app and use YouDo wherever you are.</h4></div>
+
+        </div>
+        <div class="col-md-2" >
+            <img src="app/img/download_hand_en.png"  style="position: absolute; top: -5vh;" >
+        </div>
+    </div>
+</div>

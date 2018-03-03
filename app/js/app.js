@@ -12,11 +12,11 @@ angular.module('tasksList',['ngAnimate',"ngRoute","ui.bootstrap"])
         $routeProvider.when("/checkout", {
             templateUrl:"app/views/checkout.html"
         });
-        $routeProvider.when("/products",{
-            templateUrl:"view/productList.html"
+        $routeProvider.when("/mesimot",{
+            templateUrl:"app/views/mesimaList.html"
         });
         $routeProvider.otherwise({
-            templateUrl:"app/views/mesimaList.html"
+            templateUrl:"app/views/firstPage.html"
         })
     })
 
@@ -35,17 +35,7 @@ angular.module('tasksList',['ngAnimate',"ngRoute","ui.bootstrap"])
                 console.log(deferred.promise);
                 return deferred.promise;
             },
-            /*getDataById: function(jobNumber){
-                var deffered=$q.defer();
-                $http({method:'GET', url:dataUrl}).
-                    then(function success(responce){
-                    deffered.resolve(responce.data);
-                }, function error (responce){
-                    deffered.reject(responce.status);
-                }
-                );
-                return deffered.promise;
-            },*/
+
             currentItem:null,
             currentCategory:null,
             currentSubCategory:[]

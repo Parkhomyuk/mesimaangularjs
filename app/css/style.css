@@ -26,7 +26,7 @@
     color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a >div>a, .navbar-default .navbar-nav > li > a >div>span>a{
-    color: #ecf0f1;
+    color: #95999a;
 }
 .navbar-default .navbar-nav > li > a >div>a, .navbar-default .navbar-nav > li > a >div>span>a:hover,
 .navbar-default .navbar-nav > li > a >div>a, .navbar-default .navbar-nav > li > a >div>span>a:focus
@@ -45,7 +45,7 @@
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #d1ffed;
-    background-color: rgba(144, 187, 169, 0);
+    background-color: rgb(100, 135, 118);
 }
 /* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
 .navbar-default .navbar-nav > .open > a,
@@ -54,6 +54,7 @@
     color: #000000;
     background-color: #d4d4d4;
 }
+
 /* Цвет стрелочки (треугольничка) у раскрывающихся пунктов меню */
 .navbar-default .navbar-nav > .dropdown > a .caret {
     border-top-color: #07205b;
@@ -255,6 +256,215 @@ text-align: center;
     -webkit-flex-grow: 3;
     flex-grow: 3;
 }
+/*video*/
+.b-hero-video {
+    position: relative;
+    min-height: 500px;
+    background-size: cover;
+}
+.b-hero-video:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5) url(../video/hero_video.mp4) 0 0 repeat;
+    z-index: 2;
+}
+.b-hero-video__offer {
+    font-family: latoregular,sans-serif;
+    font-size: 18px;
+    width: 680px;
+    padding-top: 127px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    color: #fff;
+    text-align: center;
+}
+.b-hero-video__h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 3.11111111em;
+    line-height: 1.10714286;
+    letter-spacing: 1.4px;
+}
+.b-hero-video__h2 {
+    padding-bottom: 25px;
+    padding-top: 8px;
+    font-size: 0.8em;
+}
+.b-hero-video__keeper {
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.b-hero-video video {
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.b-hero-video__input {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2px 11px 0 16px;
+}
+.b-hero-video__submit {
+    display: table-cell;
+    width: 178px;
+}
+.b-hero-video__example span {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    display: inline-block;
+    border-bottom: 1px dotted hsla(0,0%,100%,.7);
+    cursor: pointer;
+}
+.b-hero-video__example {
+    text-align: left;
+    font-size: .72222222em;
+    line-height: 1.38461538;
+    color: hsla(0,0%,100%,.7);
+    padding-top: .76923077em;
+    padding-bottom: 2.76923077em;
+}
+.b-hero-video__input {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2px 11px 0 16px;
+}
+.b-hero-video__form {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-transition: box-shadow .3s ease;
+    -moz-transition: box-shadow .3s ease;
+    transition: box-shadow .3s ease;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-radius: 8px;
+    background: #fff;
+    border: 2px solid #fff;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 12px 32px 0 rgba(0,0,0,.25);
+}
+.b-hero-video__input input[type=text] {
+    font-family: latoregular,sans-serif;
+    width: 100%;
+    font-size: 1em;
+    border: none;
+    line-height: 1.33333333;
+    padding: 0!important;
+}
+.b-hero-video__input
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease; font-size: 0.7em}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease; font-size: 0.7em}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease; font-size: 0.7em}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease; font-size: 0.7em}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease; font-size: 0.7em}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease; font-size: 0.7em}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease; font-size: 0.7em}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease; font-size: 0.7em}
+.js-hero-input {
+    border: 0px;
+}
+.b-hero-video__gowork span {
+    border-bottom: 1px solid rgba(128,228,255,.4);
+}
+.b-hero-video__gowork {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    display: inline-block;
+    text-decoration: none;
+    color: #80e6ff;
+    position: relative;
+    z-index: 10;
+}
+.nav-serv{
+    margin-top: 1vh;
+}
+.nav-serv div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.nav-serv__image {
+    width: 192px;
+    height: auto;
+    margin: 0 auto 10px;
+    background-size: contain;
+}
+.services{
+    margin-top: 5vh;
+}
+.services >.row> div{
+    text-align: left;
+}
+.circle{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50%;
+}
+.services>.row > div{
+    margin: 2vh 0vw 2vh 0vw;
+}
+.services>.row > div> .fa{
+    margin-right: 1vw;
+}
+.services button{
+    margin-top: 5vh;
+}
+.nav-serv a{
+    text-decoration: none;
+}
+.instruction{
+    margin-top: 15vh;
+}
+.instruction_title{
+    text-align: center;
+}
+.tasck{
+    margin: 10vh 0 10vh 0;
+    padding: 0 3vw 0 3vw;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+
+}
+.tasck_text{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.benefit{
+    background-color: #deeafb;
+}
+.benifit_header{
+    width: inherit;
+    text-align: center;
+
+}
+.app_mobile h1,div{
+    padding-left: 2vw;
+}
+/*video*/
 /*Mesima describe*/
 /* footer*/
 .b-footer{
